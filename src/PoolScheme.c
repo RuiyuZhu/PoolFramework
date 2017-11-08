@@ -125,7 +125,7 @@ uint64_t Next_Bucket_Gates(Pool *dst)
 {
     if(dst->Bucket_Index>=dst->Bucket_Size*dst->Bucket_Buffer_Size)
     {
-        PRG((block *)(dst->Gate_in_Bucket_Index_Array),dst->Bucket_Buffer_Size*dst->Bucket_Size/4,dst->Pool_PRG_Seed,&(dst->Pool_PRG_Count));
+        PRG((block *)(dst->Gate_in_Bucket_Index_Array),dst->Bucket_Buffer_Size*dst->Bucket_Size/((sizeof(block))/sizeof(uint64_t)),dst->Pool_PRG_Seed,&(dst->Pool_PRG_Count));
         dst->Bucket_Index=0;
         uint64_t i;
         for(i=0;i<dst->Bucket_Buffer_Size*dst->Bucket_Size;i++)
