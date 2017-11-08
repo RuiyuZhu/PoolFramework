@@ -17,7 +17,7 @@
 #include <emmintrin.h>
 #include <immintrin.h>
 #include <stdint.h>
-#include <sys/random.h>
+//#include <sys/random.h>
 #include "PRG.h"
 #include "PoolWarpper.h"
 /*! \file PoolScheme.h*/

@@ -7,7 +7,7 @@
 //
 
 #include "PoolScheme.h"
-#include <sys/random.h>
+//#include <sys/random.h>
 void SetupPool(Pool *dst,
                uint64_t PoolSize,
                uint64_t BufferSize,
@@ -78,12 +78,15 @@ void Pool_Gate_Buffer_Refresh(Pool *dst)
 #endif
     
 #ifdef BOB
-#ifndef __MACH__
-    getrandom(&(dst->Pool_PRG_SeedBlock),16);
+/*
+ #ifndef __MACH__
+    //getrandom(&(dst->Pool_PRG_SeedBlock),16);
 #else
     //mac system needs a walkaround
 #endif
-    psend((unsigned char*)&(dst->Pool_PRG_SeedBlock),16);
+*/
+    //user needs to setup their own randomness if necessary
+ psend((unsigned char*)&(dst->Pool_PRG_SeedBlock),16);
 #endif
     
     AES_set_encrypt_key(dst->Pool_PRG_SeedBlock,&(dst->Pool_PRG_Seed));

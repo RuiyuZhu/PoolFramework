@@ -8,12 +8,11 @@ gcc, make, libgcrypt-dev.
 
 # Underlying Protocol 
 Clone the two repositories and put them under the same dictionary, for example:
-Pool
-|-JIMU
-|-PoolFrameWork
+Pool/JIMU
+Pool/PoolFrameWork
 
 # How to run the code:
-1. Go to Pool/JIMU/src/, and change "localhost" in line 19 to the address to the IP address of the garbler. (Skip this step if tested on localhost).
+1. Go to Pool/JIMU/src/client, and change "localhost" in line 19 to the address to the IP address of the garbler. (Skip this step if tested on localhost).
 
 2. Go to Pool/PoolFrameWork/, and run:
 
