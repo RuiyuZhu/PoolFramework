@@ -7,8 +7,10 @@ Documentation is available [here](https://jimu-pool.github.io/PoolFramework/)
 gcc, make, libgcrypt-dev.
 
 # Underlying Protocol 
-Clone the two repositories and put them under the same dictionary, for example:
+Clone the underlying protocol repository[here](https://github.com/jimu-pool/JIMU) and this one  under the same dictionary, for example:
+
 Pool/JIMU
+
 Pool/PoolFrameWork
 
 # How to run the code:
